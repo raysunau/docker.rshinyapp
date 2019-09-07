@@ -11,3 +11,11 @@ https://ropenscilabs.github.io/r-docker-tutorial/
 > docker run --rm -e PASSWORD=321 -p 8787:8787 rocker/verse
 
 
+### Commands
+
+1. List running containers
+
+> docker container ps
+
+2. SSH into a running container 
+> docker exec -it <container name> /bin/bash
