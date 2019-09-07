@@ -11,6 +11,11 @@ https://ropenscilabs.github.io/r-docker-tutorial/
 ```
 docker run --rm -e PASSWORD=321 -p 8787:8787 rocker/verse
 ```
+2. Image with rstudio and shiny
+
+```
+docker run -d -p 3838:3838 -p 8787:8787 -e ADD=shiny -e PASSWORD=yourpasswordhere rocker/rstudio
+```
 
 ### Commands
 
