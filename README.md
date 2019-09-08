@@ -15,7 +15,7 @@ The repo is to dockerize a R shinyApp and make deployment easier by publish the 
 ```
 docker pull rsunau/dockershiny
 
-docker run --rm -d -p 80:3838 dockershiny
+docker run --rm -d -p 80:3838 rsunau/dockershiny
 
 ```
 
@@ -72,12 +72,11 @@ docker run --rm -d -p 3838:3838 rocker/shiny-verse
 docker stop <container>
 ```
 
-## Run the docker
+## Build the docker image and publish it
 
-```{bash}
-docker run --rm -d -p 80:3838 dockershiny
+```
 
-docker build -t dockershiny .
+docker build -t rsunau/dockershiny:tagname .
 
 docker push rsunau/dockershiny:tagname
 
@@ -87,8 +86,6 @@ docker push rsunau/dockershiny:tagname
 https://ropenscilabs.github.io/r-docker-tutorial/
 
 ## TODO
-
-
 * fix lib for app 
 * make the AutoML work in docker
 * AWS to run docker
