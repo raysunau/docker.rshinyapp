@@ -4,62 +4,85 @@ docker.rshinyapp
 ![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/rsunau/dockershiny)
 ![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/rsunau/dockershiny)
 
-The repo is to dockerize a R shinyApp.
+The repo is to dockerize a R shinyApp and make deployment easier by publish the image to DockerHub.
 
 
 ## R Docker Images 
 
-The rocker-org built a few images for the rstudio and shiny server. e.g. 
+The rocker-org built a few images for the rstudio and shiny server. e.g. [Docker Image rocker/shiny](https://github.com/rocker-org/shiny/blob/master/README.md)
 
-[Docker Image rocker/shiny](https://github.com/rocker-org/shiny/blob/master/README.md)
-
-1. Image with rstudio and tidyverse 
+* Image with Rstudio and Tidyverse package 
 
 ```
 docker run --rm -e PASSWORD=xxx -p 8787:8787 rocker/verse
 ```
-2. Image with rstudio and shiny
+
+* Image with Rstudio and shiny server
 
 ```
 docker run -d -p 3838:3838 -p 8787:8787 -e ADD=shiny -e PASSWORD=yourpasswordhere rocker/rstudio
 ```
-or use rocker/shiny-verse
+
+* Image with the shiny server and Tidyverse package
+
 ```
 docker run --rm  -p 3838:3838 rocker/shiny-verse
 ```
 
 
-## Commands
+## Docker Commands
+[Docker CLIs](https://docs.docker.com/engine/reference/commandline/docker/)
 
-1. List running containers
+1. List containers
 
 ```
-docker container ps
+docker ps
 ```
 
-2. SSH into a running container 
+2. Run a command in a running container 
 
 ```
 docker exec -it <container name> /bin/bash
 ```
   
-3. Start shiny image
+3. Run a new container
 
 ```
-docker run --rm  -p 3838:3838 rocker/shiny-verse
+docker run --rm -d -p 3838:3838 rocker/shiny-verse
 ```
 
-in the browser to see app http://localhost:3838/02_text/
+4. Stop a running container
 
-## Run Docker
+```
+docker stop <container>
+```
+
+## Run the docker
 
 ```{bash}
+docker run --rm -d -p 80:3838 dockershiny
+
 docker build -t dockershiny .
 
-docker run --rm -d -p 80:3838 dockershiny
+docker push rsunau/dockershiny:tagname
+
 ```
 
-## very useful tutorial on R and Docker 
+## How to use it?
+
+1. Do Docker on your machine
+
+1. Pull docker image from DockerHub
+
+```
+docker pull rsunau/dockershiny
+
+docker run --rm -d -p 80:3838 dockershiny
+
+```
+
+
+## A very useful tutorial on R and Docker 
 https://ropenscilabs.github.io/r-docker-tutorial/
 
 ## TODO
