@@ -39,6 +39,15 @@ docker run --rm  -p 3838:3838 rocker/shiny-verse
 
 in the browser to see app http://localhost:3838/02_text/
 
+### Run Docker
+
+```{bash}
+docker build -t dockershiny .
+docker run --rm -d -p 80:3838 dockershiny
+```
+
+
+
 ### TODO
 
 * work out dockerfile
