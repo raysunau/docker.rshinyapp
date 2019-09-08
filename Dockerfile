@@ -19,6 +19,12 @@ RUN R -e "install.packages('shiny', repos='http://cran.rstudio.com/')"
 RUN R -e "install.packages('shinydashboard', repos='http://cran.rstudio.com/')"
 RUN R -e "devtools::install_github('andrewsali/shinycssloaders')"
 
+# Install R packages
+RUN install2.r --error \
+    mlr \
+    jsonlite \
+    tseries
+    
 # copy the app to the image
 COPY docker.rshinyapp.Rproj /srv/shiny-server/dockershiny/
 COPY *.R /srv/shiny-server/dockershiny/
