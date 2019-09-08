@@ -43,6 +43,7 @@ in the browser to see app http://localhost:3838/02_text/
 
 ```{bash}
 docker build -t dockershiny .
+
 docker run --rm -d -p 80:3838 dockershiny
 ```
 
@@ -50,8 +51,7 @@ docker run --rm -d -p 80:3838 dockershiny
 
 ### TODO
 
-* work out dockerfile
-* upload a docker image into HUB
+
 * fix lib for app 
 * make the AutoML work in docker
 * AWS to run docker
