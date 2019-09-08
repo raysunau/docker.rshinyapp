@@ -1,28 +1,35 @@
-
-# docker.rshinyapp
+docker.rshinyapp
+==========================
 
 ![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/rsunau/dockershiny)
 ![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/rsunau/dockershiny)
 
-The repo is to dockerize a shinyApp and make a ShinyApp deployment easier.
+The repo is to dockerize a R shinyApp.
 
-### very useful tutorial on R and Docker 
-https://ropenscilabs.github.io/r-docker-tutorial/
 
-### Docker Images 
+## R Docker Images 
+
+The rocker-org built a few images for the rstudio and shiny server. e.g. 
+
+[Docker Image rocker/shiny](https://github.com/rocker-org/shiny/blob/master/README.md)
 
 1. Image with rstudio and tidyverse 
 
 ```
-docker run --rm -e PASSWORD=321 -p 8787:8787 rocker/verse
+docker run --rm -e PASSWORD=xxx -p 8787:8787 rocker/verse
 ```
 2. Image with rstudio and shiny
 
 ```
 docker run -d -p 3838:3838 -p 8787:8787 -e ADD=shiny -e PASSWORD=yourpasswordhere rocker/rstudio
 ```
+or use rocker/shiny-verse
+```
+docker run --rm  -p 3838:3838 rocker/shiny-verse
+```
 
-### Commands
+
+## Commands
 
 1. List running containers
 
@@ -44,7 +51,7 @@ docker run --rm  -p 3838:3838 rocker/shiny-verse
 
 in the browser to see app http://localhost:3838/02_text/
 
-### Run Docker
+## Run Docker
 
 ```{bash}
 docker build -t dockershiny .
@@ -52,9 +59,10 @@ docker build -t dockershiny .
 docker run --rm -d -p 80:3838 dockershiny
 ```
 
+## very useful tutorial on R and Docker 
+https://ropenscilabs.github.io/r-docker-tutorial/
 
-
-### TODO
+## TODO
 
 
 * fix lib for app 
