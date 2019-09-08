@@ -24,7 +24,7 @@ docker run --rm -d -p 80:3838 rsunau/dockershiny
 
 ## R Docker Images 
 
-The rocker-org built a few images for the rstudio and shiny server. e.g. [Docker Image rocker/shiny](https://github.com/rocker-org/shiny/blob/master/README.md)
+The rocker-org built a few images for the rstudio and shiny server. e.g. [Docker Image rocker/shiny](https://github.com/rocker-org/shiny)
 
 * Image with Rstudio and Tidyverse package 
 
