@@ -86,6 +86,4 @@ docker stop <container>
 https://ropenscilabs.github.io/r-docker-tutorial/
 
 ## TODO
-* fix lib for app 
-* make the AutoML work in docker
-* AWS to run docker
+1. To run docker on AWS
