@@ -81,6 +81,8 @@ docker run --rm -d -p 80:3838 dockershiny
 
 ```
 
+You can run the app by visiting http://localhost/dockershiny/
+
 
 ## A very useful tutorial on R and Docker 
 https://ropenscilabs.github.io/r-docker-tutorial/
