@@ -6,11 +6,11 @@ docker.rshinyapp
 
 The repo is to dockerize a R shinyApp and make deployment easier by publish the image to DockerHub.
 
-## How to use it?
+## How could I run the app in a container?
 
 1. Download and install [Docker](https://www.docker.com/products/docker-desktop)
 
-2. Pull docker image from DockerHub
+2. Pull docker image from DockerHub and run a container
 
 ```
 docker pull rsunau/dockershiny
@@ -20,6 +20,16 @@ docker run --rm -d -p 80:3838 rsunau/dockershiny
 ```
 
 3. You can run the app by visiting http://localhost/dockershiny/
+
+## Build a docker image and publish it
+
+```
+
+docker build -t rsunau/dockershiny:tagname .
+
+docker push rsunau/dockershiny:tagname
+
+```
 
 
 ## R Docker Images 
@@ -70,16 +80,6 @@ docker run --rm -d -p 3838:3838 rocker/shiny-verse
 
 ```
 docker stop <container>
-```
-
-## Build the docker image and publish it
-
-```
-
-docker build -t rsunau/dockershiny:tagname .
-
-docker push rsunau/dockershiny:tagname
-
 ```
 
 ## A very useful tutorial on R and Docker 
