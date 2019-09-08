@@ -1,9 +1,11 @@
 
 # docker.rshinyapp
-Dockerize a shinyApp 
+=============================== 
 
 ![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/rsunau/dockershiny)
 ![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/rsunau/dockershiny)
+
+The repo is to dockerize a shinyApp and make a ShinyApp deployment easier.
 
 ### very useful tutorial on R and Docker 
 https://ropenscilabs.github.io/r-docker-tutorial/
