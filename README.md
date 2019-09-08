@@ -1,8 +1,8 @@
 docker.rshinyapp
 ==========================
 
-![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/rsunau/dockershiny)
 ![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/rsunau/dockershiny)
+![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/rsunau/dockershiny)
 
 The repo is to dockerize a R shinyApp and make deployment easier by publish the image to DockerHub.
 
