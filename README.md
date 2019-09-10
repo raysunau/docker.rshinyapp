@@ -82,6 +82,23 @@ docker run --rm -d -p 3838:3838 rocker/shiny-verse
 docker stop <container>
 ```
 
+## Run a docker container on AWS
+
+1. create a new Security group on AWS and open port 80 and 8787
+2. Launch a EC2 instance
+3. install docker
+```
+sudo yum update
+sudo yum install docker
+sudo service docker start
+```
+
+4. run a docker image with rstudio and shiny
+```
+sudo docker run -d -p 80:3838 -p 8787:8787 -e ADD=shiny -e PASSWORD=xxx rocker/rstudio
+
+```
+
 ## A very useful tutorial on R and Docker 
 https://ropenscilabs.github.io/r-docker-tutorial/
 
