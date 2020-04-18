@@ -75,8 +75,15 @@ docker exec -it <container name> /bin/bash
 ```
 docker run --rm -d -p 3838:3838 rocker/shiny-verse
 ```
+4. Copy local files to/from a running container
 
-4. Stop a running container
+```
+docker cp foo.txt <container name>:/foo.txt
+docker cp src/. <container name>:/target
+docker cp <container name>:/src/. target
+```
+
+5. Stop a running container
 
 ```
 docker stop <container>
