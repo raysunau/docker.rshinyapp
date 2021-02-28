@@ -103,4 +103,5 @@ sudo docker run -d -p 80:3838 -p 8787:8787 -e ADD=shiny -e PASSWORD=xxx rocker/r
 https://ropenscilabs.github.io/r-docker-tutorial/
 
 ## TODO
-1. To run docker on AWS
+1. To run docker on AWS, reference free ebook: [Shiny AWS Book By Matt Dancho](https://business-science.github.io/shiny-production-with-aws-book/?utm_content=bufferf4031&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)
+
