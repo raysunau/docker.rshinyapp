@@ -10,8 +10,10 @@ RUN apt-get update && apt-get install -y \
     libcairo2-dev \
     libxt-dev \
     libssl-dev \
-    libssh2-1-dev 
-  
+    libssh2-1-dev
+
+# Clean cache
+RUN rm -rf /var/lib/apt/lists/*
 
 # install R packages required 
 # (change it dependeing on the packages you need)
@@ -38,4 +40,4 @@ EXPOSE 3838
 RUN sudo chown -R shiny:shiny /srv/shiny-server
 
 # run app
-CMD ["/usr/bin/shiny-server.sh"]
+CMD ["/usr/bin/shiny-server"]
